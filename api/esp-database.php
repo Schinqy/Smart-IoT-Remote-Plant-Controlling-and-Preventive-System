@@ -5,7 +5,7 @@
     // Your Database user
     $username = "id19694182_schinqy";
     // Your Database user password
-    $password = "#8Y7epB{D<EF-OgQ";
+    $password = "PUTTYOURS";
 
     function createOutput($name, $board, $gpio, $state) {
         global $servername, $username, $password, $dbname;
