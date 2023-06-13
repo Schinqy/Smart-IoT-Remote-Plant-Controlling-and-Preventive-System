@@ -1,0 +1,25 @@
+body {
+  background-color: rgb(221, 255, 187);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(179, 201, 156);
+}
+
+p, a, label, input[type="text"], input[type="password"], input[type="email"], textarea {
+  color: rgb(164, 188, 146);
+}
+
+button, input[type="submit"], input[type="reset"] {
+  background-color: rgb(199, 233, 176);
+  color: rgb(164, 188, 146);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+  background-color: rgb(179, 201, 156);
+}

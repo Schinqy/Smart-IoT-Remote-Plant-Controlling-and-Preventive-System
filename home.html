@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Smart Pump</title>
+  <!-- Font Awesome -->
+  <!-- Bootstrap core CSS -->
+     <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous"> <!-- JavaScript Bundle with Popper --> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script> 
+   
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--<link rel="shortcut icon" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/favicon.ico">-->
+  <!-- Your custom styles (optional) -->
+  <!-- this had NOTHING in it ???  -->
+  <!-- link href="css/style.css" rel="stylesheet" -->
+  
+  
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+  
+ <!-- MDB -->
+   <!-- MDB -->
+ <script
+   type="text/javascript"
+   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"
+ ></script>
+  
+  
+  <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://kit.fontawesome.com/e503e95a46.js" crossorigin="anonymous"></script>
+  
+  
+ 
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" href="style.css">-->
+
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+   <!-- Graphs Stuff -->
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type = "text/javascript">
+         google.charts.load('current', {packages: ['corechart','line']});  
+          google.charts.setOnLoadCallback(drawChart);
+	  google.charts.setOnLoadCallback(drawChart2);
+	  google.charts.setOnLoadCallback(drawChart3);
+      </script>
+
+     
+<!-- Graphs Stuff End -->
+	
+
+
+  <style>
+    /* TEMPLATE STYLES */
+
+    main {
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+    }
+
+    .extra-margins {
+      margin-top: 1rem;
+      margin-bottom: 2.5rem;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <!--Main Navigation-->
+  <header>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color-dark bg-info">
+      <a class="navbar-brand ml-4" href="home.html"><strong>Smart Pump</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item"> 
+             <a class="nav-link" href="control.php">Control</a> 
+          </li> 
+        <li class="nav-item">
+            <a class="nav-link" href="calibration.html">Calibration</a>
+        </li> 
+		  
+          
+        </ul>
+				  <ul class="navbar-nav "> 
+				  <li class="nav-item active">
+            <a class="nav-link d-flex justify-content-end" href="index.html">Logout</a>
+          </li>
+          
+        </ul>
+  
+      </div>
+    </nav>
+
+  </header>
+  
+  <body>
+
+ 
+     <!-- Modal --> 
+        <!-- <div class="modal fade" id="myModal" role="dialog"> -->
+            <!-- <div class="modal-dialog modal-lg"> -->
+                <!-- <!-- Modal content--> 
+                <!-- <div class="modal-content"> -->
+                    <!-- <div class="modal-header text-center"> -->
+                        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                        <!-- <h4 class="modal-title">Dumpster Volume/Time Chart</h4> -->
+                    <!-- </div> -->
+                    <!-- <div class="modal-body"> -->
+                        <!-- <canvas id="myChart"></canvas> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+
+            <!-- </div> -->
+        <!-- </div> -->
+		 
+	
+	      <style>
+        /* img[alt="www.000webhost.com"] 
+         {opacity:0;} */ 
+         img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
+         {
+display:none!important;
+}
+</style> 
+
+	
+<div class="container-fluid m-2">
+<div class="row mt-3">
+<div class="col-md-4 border" style="height: 85vh ">
+ <h3> Humidity Graph (%/Time)  </h3>
+ <i id="humid" ><label>Loading...</label></i>
+ 
+ <div id = "humidityGraph" style = "
+border: 3px outset #13a215;
+
+
+  height: 70vh;
+  width: 100%;
+  
+  
+  ">
+ </div>
+</div>
+
+<div class="col-md-4 border " style="height: 85vh">
+<h3> Tank Volume Graph (% Vol/Time)</h3>
+<i id="vol"><label>Loading...</label></i>
+ 
+ <div id = "volGraph" style = "
+border: 3px outset #13a215;
+
+
+  height: 70vh;
+  width: 100%;
+  
+  
+  ">
+ </div>
+</div>
+
+<div class="col-md-4 border " style="height: 85vh">
+<h3> Temperature Graph (°C/Time)</h3>
+    <i id="temp"><label>Loading...</label></i>
+ 
+ <div id = "tempGraph" style = "
+border: 3px outset #13a215;
+
+
+  height: 70vh;
+  width: 100%;
+  
+  
+  ">
+ </div>
+</div>
+
+
+<div class="col-md-12 border " style="height: 85vh">
+<h3> Map</h3>
+
+    <!--The div element for the map -->
+    <div id="map" class="mt-2" style="width:100%;height:65vh;"></div>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+</div>
+
+</div>
+<script src="charts.js"></script>
+ <script  src="draw.js"></script>
+
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAraXCogL5ZDd_qkVD_fFXDhJWqcegT6zM&callback=initMap"
+      defer
+    ></script> 
+	
+</body>
+</html>
