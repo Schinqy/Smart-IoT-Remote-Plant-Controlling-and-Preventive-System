@@ -55,10 +55,7 @@ const char* ssid = "NBV";
 const char* password = "MALKONDELIA#";
 
 //Your IP address or domain name with URL path
-const char* serverName = "http://protathings.000webhostapp.com/esp-outputs-action.php?action=outputs_state&board=1";
-    String mO;
-     
-// Update interval time set to 5 seconds
+const char* serverName = "http://protathings.000webhostapp.com/api/esp-outputs-action.php?action=outputs_state&board=1";
 // Update interval time set to 5 seconds
 const long interval = 5000;
 unsigned long previousMillis = 0;
@@ -68,8 +65,6 @@ String outputsState;
 
 void setup() {
   Serial.begin(9600);
-  
-
 dht.begin(); 
 pinMode(SIM_PWR , OUTPUT);
 pinMode(triggerPin , OUTPUT);
@@ -78,7 +73,6 @@ pinMode(enFan , OUTPUT);
 pinMode(enPump , OUTPUT);
 delay(2000);
 digitalWrite(SIM_PWR, HIGH);
-
 delay(1000);
 digitalWrite(SIM_PWR, LOW);
 delay(1000);
@@ -123,10 +117,7 @@ void loop() {
     
       // save the last HTTP GET Request
       previousMillis = currentMillis;
-    
-  
-  }
-    
+  }   
 }
 
 void webCtrl()
@@ -176,8 +167,6 @@ delay(500);
     Serial.print("Error code: ");
     Serial.println(responseCode2);
   }
-
-
   return payload;
 }
 
@@ -229,7 +218,6 @@ void getHumidity()
 
 void getVolume()
 {
-
 float h = 0.00;
 //float ht = 250.00;
   
@@ -247,8 +235,6 @@ float h = 0.00;
 //*******************************CALCULATE DISTANCE END*******************************//
 
   //delay(1000);
- 
-
   Serial.print("volume:");
   
   // Serial.print(" cm\n");
@@ -272,7 +258,6 @@ float h = 0.00;
 
 void postData()
 {
-
  getTemp();
  getHumidity();
  getVolume();
@@ -283,21 +268,14 @@ void postData()
 int len2 = f.length() + 1;
 char fChar[len2];
    f.toCharArray(fChar, len2);
-
-
  Serial.print("Payload: "); Serial.println(fChar);
 Serial.print("Payload Str: "); Serial.println(f);
 
   
     uint16_t responseCode2 = sim808.httpPost("http://protathings.000webhostapp.com/200/post_data.php",S_F("application/x-www-form-urlencoded"), fChar, response2, 512);
     
-
-    
-
 Serial.println("Status: " + String(responseCode2));
    Serial.println("Response: " + String(response2));
-
-    
 }
 
 
@@ -321,7 +299,7 @@ void sendSMSs()
 {
  simSerial.println("AT+CMGF=1"); // Configuring TEXT mode
  updateSerial();
- simSerial.println("AT+CMGS=\"+263776432893\"");//change ZZ with country code and xxxxxxxxxxx with phone number to sms
+ simSerial.println("AT+CMGS=\"+263776xxxxxx\"");//change ZZ with country code and xxxxxxxxxxx with phone number to sms
   updateSerial();
   simSerial.print("[SMART ALERT] Vol=" + String(perc) + "%. H=" + String(humid, 2) + ". T=" + String(temp, 2)  ); //text content
   updateSerial();
