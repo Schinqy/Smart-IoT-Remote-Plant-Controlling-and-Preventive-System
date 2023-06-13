@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>SMART WASTE MANAGEMENT</title>
+  <title>SMART PUMP</title>
   <!-- Font Awesome -->
   <!-- Bootstrap core CSS -->
      <!-- CSS only -->
@@ -18,8 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!--<link rel="shortcut icon" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/favicon.ico">-->
-  <!-- Your custom styles (optional) -->
-  <!-- this had NOTHING in it ???  -->
+
   <!-- link href="css/style.css" rel="stylesheet" -->
   
   
@@ -51,20 +50,6 @@
    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-
-  <style>
-    /* TEMPLATE STYLES */
-
-    main {
-      padding-top: 3rem;
-      padding-bottom: 2rem;
-    }
-
-    .extra-margins {
-      margin-top: 1rem;
-      margin-bottom: 2.5rem;
-    }
-  </style>
 
 
 </head>
@@ -142,7 +127,7 @@ var password = $("#Password").val();
  
             function validateForm(){
 	//document.getElementById("status").innerHTML = "...wait a sec";
-		let url = "/200/api/login.php";
+		let url = "/api/login.php";
 let datax = JSON.parse('{"username":"' + username + '", "password": "' + password + '"}') ;
 
 console.log(datax);	
