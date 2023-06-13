@@ -1,5 +1,5 @@
 <?php
-    include_once('esp-database.php');
+    include_once('/api/esp-database.php');
 
     $result = getAllOutputs();
     $html_buttons = null;
