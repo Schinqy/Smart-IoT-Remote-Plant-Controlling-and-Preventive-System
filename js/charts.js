@@ -34,11 +34,6 @@ chart.draw(datas, options);
 }
 
 function drawChart2() {
-
-
-
-        
-
 // Set Data
 var datas = new google.visualization.DataTable();
   datas.addColumn('string', 'dates');
@@ -87,10 +82,6 @@ chart.draw(datas, options);
 }
 
 
-
-
-
-
    var intervall;
    
    window.desktopcheck = function() {
@@ -114,7 +105,7 @@ function getDatah(){
 
         method: "GET", 
         
-        url: "mysql2json.php",
+        url: "/api/mysql2json.php",
 
       }).done(function( data ) { 
 
