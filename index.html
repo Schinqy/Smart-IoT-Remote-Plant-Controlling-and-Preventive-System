@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>SMART PUMP</title>
+  <title>Smart IoT Remote Plant Controlling and Preventive System</title>
   <!-- Font Awesome -->
   <!-- Bootstrap core CSS -->
      <!-- CSS only -->
@@ -18,7 +18,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!--<link rel="shortcut icon" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/favicon.ico">-->
-
+  <!-- Your custom styles (optional) -->
+  <!-- this had NOTHING in it ???  -->
   <!-- link href="css/style.css" rel="stylesheet" -->
   
   
@@ -51,6 +52,20 @@
 
    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
+  <style>
+    /* TEMPLATE STYLES */
+
+    main {
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+    }
+
+    .extra-margins {
+      margin-top: 1rem;
+      margin-bottom: 2.5rem;
+    }
+  </style>
+
 
 </head>
 
@@ -58,8 +73,6 @@
 
   <!--Main Navigation-->
 
-  
-  <body>
 
 
 <section class="vh-100" style="background-color: #0d6efd;">
@@ -79,8 +92,8 @@
 
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <!--<i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>-->
-                    <i class="fa-solid fa-faucet-drip fa-bounce fa-2x me-3" style="color: #2977ff;"></i>
-                    <span class="h1 fw-bold mb-0">Smart Pump</span>
+                  
+                    <span class="h1 fw-bold mb-0">Smart IoT Remote Plant Controlling and Preventive System</span>
                   </div>
 
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
@@ -96,13 +109,11 @@
                   </div>
 
                   <div class="pt-1 mb-4">
-                    <button id = "Login"class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                    <button id = "Login" class="btn btn-dark btn-lg btn-block" type="button">Login</button>
                   </div>
 
-                  <a class="small text-muted" id=status style="color: "red""></a>
-                  <p class="mb-5 pb-lg-2" style="color: blue;">Don't have an account? <a href="#!"
-                      style="color: #393f81;">Request one here</a></p>
-                  <a href="#!" class="small text-muted">Smart Water Management Know More .</a>
+                  <a class="small text-muted" id=status style="color: red !important "></a>
+               
                 
                 </form>
 
@@ -127,7 +138,7 @@ var password = $("#Password").val();
  
             function validateForm(){
 	//document.getElementById("status").innerHTML = "...wait a sec";
-		let url = "/api/login.php";
+		let url = "/200/api/login.php";
 let datax = JSON.parse('{"username":"' + username + '", "password": "' + password + '"}') ;
 
 console.log(datax);	
